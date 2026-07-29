@@ -1,1 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+酒井税理士事務所｜
+33年間の国税経験 × AI・DX支援
+</title>
+
+<meta name="description"
+content="兵庫県姫路市の酒井税理士事務所。33年間の国税経験を活かし、法人税・相続・税務調査・AI・DX支援まで経営者を総合サポートします。">
+
+<link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-inner">
+
+<img
+src="IMG_6417.jpeg"
+class="logo"
+alt="酒井税理士事務所">
+
+<div class="tel">
+
+TEL 079-263-7470
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<p class="gold">
+
+33年間の国税経験 × AI・DX支援
+
+</p>
+
+<h1>
+
+税務だけでは終わらない。
+
+<br>
+
+経営改善まで伴走する税理士。
+
+</h1>
+
+<p>
+
+法人税・所得税・相続税・税務調査・AI導入支援まで。
+
+豊富な経験と最新技術で、
+
+経営者の未来を支えます。
+
+</p>
+
+<a
+href="#contact"
+class="btn">
+
+30分無料相談はこちら
+
+</a>
+
+</div>
+
+<div class="hero-photo">
+
+<img
+src="IMG_7052.jpeg"
+alt="酒井竜二税理士">
+
+</div>
+
+</div>
+
+</section>
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f0f;
+    color:#ffffff;
+    font-family:
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+    line-height:1.8;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(15,15,15,.95);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #303030;
+
+    z-index:999;
+
+}
+
+.header-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    width:210px;
+
+}
+
+.tel{
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:120px;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.gold{
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+.hero h1{
+
+    font-size:56px;
+
+    line-height:1.35;
+
+    margin:22px 0;
+
+}
+
+.hero p{
+
+    color:#d7d7d7;
+
+    font-size:18px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:18px 42px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 40px rgba(212,175,55,.35);
+
+}
+
+.hero-photo img{
+
+    border-radius:22px;
+
+    border:3px solid #D4AF37;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+}
+  /* =========================
+   FEATURES
+========================= */
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    color:#D4AF37;
+
+}
+
+.section-sub{
+
+    text-align:center;
+
+    color:#bfbfbf;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#181818;
+
+    border:1px solid #2d2d2d;
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.card-icon{
+
+    font-size:44px;
+
+    margin-bottom:22px;
+
+}
+
+.card h3{
+
+    color:#D4AF37;
+
+    font-size:24px;
+
+    margin-bottom:16px;
+
+}
+
+.card p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-secondary{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    border:2px solid #D4AF37;
+
+    color:#D4AF37;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    transition:.3s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:40px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.logo{
+
+width:170px;
+
+}
+
+.header-inner{
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+}
+  /* =========================
+   SERVICE
+========================= */
+
+.service{
+
+    padding:100px 0;
+
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.service-box{
+
+    background:#181818;
+
+    border:1px solid #303030;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+.service-box:hover{
+
+    border-color:#D4AF37;
+
+    transform:translateY(-6px);
+
+}
+
+.service-box h3{
+
+    color:#D4AF37;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.service-box p{
+
+    color:#d8d8d8;
+
+    line-height:1.9;
+
+}
+
+@media(max-width:900px){
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+  
+
+  
+
+}
+
+}
+ 
+   
