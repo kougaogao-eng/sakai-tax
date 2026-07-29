@@ -1,7 +1,8 @@
-/* ==========================================
+/* ======================================================
    酒井税理士事務所
-   Premium Style
-========================================== */
+   Premium Landing Page
+   style.css
+====================================================== */
 
 *{
     margin:0;
@@ -14,372 +15,707 @@ html{
 }
 
 body{
+
     font-family:
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
-    background:#0f0f10;
+
+    background:#050505;
     color:#ffffff;
     line-height:1.8;
+
+    overflow-x:hidden;
+
 }
 
 img{
-    max-width:100%;
+
     display:block;
+    max-width:100%;
+
 }
 
 a{
-    color:inherit;
+
     text-decoration:none;
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
 }
 
 .container{
-    width:min(1100px,92%);
+
+    width:min(1200px,92%);
     margin:auto;
+
 }
 
-/* ------------------------------
+/* ==================================
 Header
------------------------------- */
+================================== */
 
 header{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
-    z-index:999;
-    background:rgba(10,10,10,.92);
+
+    z-index:9999;
+
+    background:rgba(0,0,0,.88);
+
     backdrop-filter:blur(10px);
-    border-bottom:1px solid #333;
+
+    border-bottom:1px solid rgba(212,175,55,.25);
+
 }
 
 .header-inner{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    padding:16px 0;
+
+    height:82px;
+
 }
 
 .logo{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:15px;
+
 }
 
 .logo img{
-    width:56px;
+
+    width:60px;
+
 }
 
 .logo span{
-    font-size:20px;
-    font-weight:bold;
+
     color:#D4AF37;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:.05em;
+
 }
 
 nav ul{
+
     display:flex;
-    gap:28px;
-    list-style:none;
+
+    gap:35px;
+
 }
 
 nav a{
+
+    color:#ffffff;
+
+    font-size:16px;
+
     transition:.3s;
+
 }
 
 nav a:hover{
+
     color:#D4AF37;
+
 }
 
-/* ------------------------------
+/* ==================================
 Hero
------------------------------- */
+================================== */
 
 .hero{
+
+    position:relative;
+
     padding-top:120px;
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
+    overflow:hidden;
+
     background:
-    linear-gradient(
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.85)
-    );
+
+    radial-gradient(circle at top left,#3b2d0a 0%,#050505 35%),
+
+    radial-gradient(circle at bottom right,#132847 0%,#050505 35%),
+
+    #050505;
+
+}
+
+/* ゴールド斜めライン */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:33%;
+
+    top:-200px;
+
+    width:4px;
+
+    height:180%;
+
+    background:#D4AF37;
+
+    transform:rotate(18deg);
+
+    opacity:.85;
+
 }
 
 .hero-grid{
+
     display:grid;
-    grid-template-columns:1fr 420px;
-    gap:60px;
+
+    grid-template-columns:55% 45%;
+
     align-items:center;
+
+    gap:30px;
+
+}
+
+.hero-left{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-logo{
+
+    width:260px;
+
+    margin-bottom:28px;
+
 }
 
 .hero h1{
-    font-size:56px;
-    line-height:1.3;
+
+    font-size:54px;
+
+    line-height:1.35;
+
     margin-bottom:30px;
+
+    font-weight:700;
+
 }
 
 .gold{
+
     color:#D4AF37;
+
 }
 
 .catch{
+
     font-size:22px;
-    color:#dddddd;
+
+    color:#f3f3f3;
+
     margin-bottom:40px;
+
 }
 
 .hero-list{
-    list-style:none;
+
     margin-bottom:45px;
+
 }
 
 .hero-list li{
+
     margin:12px 0;
+
     font-size:20px;
+
 }
 
-.hero-image img{
-    border-radius:20px;
-    border:4px solid #D4AF37;
-    box-shadow:0 20px 60px rgba(0,0,0,.5);
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    position:relative;
+
+}
+
+.hero-right img{
+
+    width:420px;
+
+    border-radius:8px;
+
+    object-fit:cover;
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.55);
+
 }
 
 .cta{
+
     display:inline-block;
-    background:#D4AF37;
-    color:#000;
-    padding:18px 42px;
-    border-radius:999px;
-    font-size:20px;
+
+    background:linear-gradient(
+        180deg,
+        #f4dd8b,
+        #d4af37
+    );
+
+    color:#111;
+
     font-weight:bold;
+
+    font-size:20px;
+
+    padding:18px 42px;
+
+    border-radius:10px;
+
     transition:.3s;
+
+    box-shadow:0 12px 30px rgba(212,175,55,.25);
+
 }
 
 .cta:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 40px rgba(212,175,55,.35);
+
+    transform:translateY(-3px);
+
 }
-/* ------------------------------
-Section
------------------------------- */
+/* ==================================
+Section 共通
+================================== */
 
 section{
-    padding:100px 0;
+
+    padding:90px 0;
+
 }
 
 .section-title{
+
     text-align:center;
-    font-size:42px;
+
     color:#D4AF37;
-    margin-bottom:18px;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
 }
 
 .section-sub{
+
     text-align:center;
-    color:#cfcfcf;
-    margin-bottom:60px;
-    font-size:18px;
-}
 
-/* ------------------------------
-Profile
------------------------------- */
-
-.profile{
-    background:#171717;
-}
-
-.profile-grid{
-    display:grid;
-    grid-template-columns:340px 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.profile-photo img{
-    border-radius:18px;
-    border:3px solid #D4AF37;
-}
-
-.profile-text h3{
-    font-size:32px;
-    margin-bottom:25px;
-}
-
-.profile-text p{
-    margin-bottom:18px;
     color:#dddddd;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
 }
 
-/* ------------------------------
-Career
------------------------------- */
+/* ==================================
+Problem
+================================== */
 
-.career{
-    background:#101010;
+.problem{
+
+    background:#0b0b0b;
+
+    border-top:1px solid rgba(212,175,55,.2);
+
+    border-bottom:1px solid rgba(212,175,55,.2);
+
 }
 
-.timeline{
-    max-width:900px;
-    margin:auto;
+.problem-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:18px;
+
 }
 
-.timeline-item{
-    border-left:3px solid #D4AF37;
-    padding:0 0 35px 28px;
-    margin-left:15px;
+.problem-card{
+
+    background:#111;
+
+    border:1px solid #6b5520;
+
+    border-radius:12px;
+
+    padding:26px 18px;
+
+    text-align:center;
+
+    transition:.3s;
+
 }
 
-.timeline-item h4{
+.problem-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#D4AF37;
+
+}
+
+.problem-card h3{
+
     color:#D4AF37;
-    margin-bottom:12px;
-    font-size:22px;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
 }
 
-.timeline-item p{
-    color:#d8d8d8;
+.problem-card p{
+
+    color:#ddd;
+
+    font-size:15px;
+
 }
 
-/* ------------------------------
+/* ==================================
+33年 × AI
+================================== */
+
+.strength{
+
+    background:
+
+    radial-gradient(circle at left,#3b2d0a 0,#0a0a0a 35%),
+
+    radial-gradient(circle at right,#102a49 0,#0a0a0a 35%),
+
+    #0a0a0a;
+
+}
+
+.strength-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 120px 1fr;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.strength-box{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+.strength-box h3{
+
+    color:#D4AF37;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.strength-box ul li{
+
+    margin:14px 0;
+
+    color:#f2f2f2;
+
+}
+
+.cross{
+
+    text-align:center;
+
+    font-size:72px;
+
+    color:#D4AF37;
+
+    font-weight:bold;
+
+}
+
+/* ==================================
 Service
------------------------------- */
+================================== */
+
+.service{
+
+    background:#faf8f2;
+
+    color:#222;
+
+}
+
+.service .section-title{
+
+    color:#222;
+
+}
 
 .service-grid{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-    margin-top:50px;
-}
 
-.service-box{
-    background:#181818;
-    border:1px solid #303030;
-    border-radius:20px;
-    padding:35px;
-    transition:.3s;
-}
+    grid-template-columns:repeat(4,1fr);
 
-.service-box:hover{
-    border-color:#D4AF37;
-    transform:translateY(-6px);
-}
-
-.service-box h3{
-    color:#D4AF37;
-    margin-bottom:18px;
-    font-size:24px;
-}
-
-.service-box p{
-    color:#d8d8d8;
-    line-height:1.9;
-}
-
-@media(max-width:900px){
-
-    .hero-grid,
-    .profile-grid,
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-
-    nav{
-        display:none;
-    }
-
-    .hero{
-        text-align:center;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
+    gap:22px;
 
 }
-/* ------------------------------
-Contact
------------------------------- */
 
-.contact{
-    background:#171717;
-}
+.service-card{
 
-.contact-box{
-    max-width:900px;
-    margin:0 auto;
+    background:#fff;
+
+    border-radius:14px;
+
+    border:1px solid #ddd;
+
+    padding:28px;
+
     text-align:center;
-    background:#1d1d1d;
-    padding:60px 40px;
-    border-radius:24px;
-    border:1px solid #333;
-}
 
-.contact-box h3{
-    font-size:34px;
-    color:#D4AF37;
-    margin-bottom:20px;
-}
-
-.contact-box p{
-    color:#dddddd;
-    margin-bottom:18px;
-    line-height:1.9;
-}
-
-.contact-info{
-    margin:35px 0;
-}
-
-.contact-info p{
-    font-size:20px;
-    margin:12px 0;
-}
-
-.contact-button{
-    display:inline-block;
-    background:#D4AF37;
-    color:#000;
-    font-weight:bold;
-    font-size:22px;
-    padding:20px 48px;
-    border-radius:999px;
     transition:.3s;
+
 }
 
-.contact-button:hover{
+.service-card:hover{
+
     transform:translateY(-5px);
-    box-shadow:0 15px 40px rgba(212,175,55,.35);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
 }
 
-/* ------------------------------
+.service-card h3{
+
+    color:#7a5b18;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.service-card p{
+
+    color:#555;
+
+}
+
+/* ==================================
+相談
+================================== */
+
+.cta-section{
+
+    background:#ffffff;
+
+}
+
+.cta-box{
+
+    background:#fff;
+
+    border:2px solid #D4AF37;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    text-align:center;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+.cta-box h2{
+
+    color:#222;
+
+    margin-bottom:18px;
+
+    font-size:34px;
+
+}
+
+.cta-box p{
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+/* ==================================
 Footer
------------------------------- */
+================================== */
 
 footer{
-    background:#0a0a0a;
-    border-top:1px solid #303030;
-    padding:60px 0;
+
+    background:#050505;
+
+    color:#fff;
+
+    border-top:2px solid #D4AF37;
+
+    padding:70px 0 40px;
+
+    text-align:center;
+
 }
 
 footer h3{
+
     color:#D4AF37;
-    margin-bottom:20px;
-    font-size:26px;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
 }
 
 footer p{
-    color:#d8d8d8;
-    margin-bottom:12px;
+
+    margin:8px 0;
+
+    color:#ccc;
+
 }
 
 .copyright{
-    margin-top:30px;
-    text-align:center;
-    color:#999999;
-    font-size:14px;
+
+    margin-top:25px;
+
+    color:#777;
+
+}
+
+/* ==================================
+スマホ
+================================== */
+
+@media(max-width:900px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero::before{
+
+display:none;
+
+}
+
+.hero-right img{
+
+width:300px;
+
+}
+
+.problem-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.strength-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cross{
+
+display:none;
+
+}
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
 }
